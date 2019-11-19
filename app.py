@@ -42,6 +42,3 @@ def read_task():
 def save_task(task_id: int):
     task = list(filter(lambda t: t['id'] == task_id, tasks))
     return task[0]
-
-if __name__ == "__main__":
-    uvicorn.run("app:app", host="py-v-f.herokuapp.com", port=5000, log_level="info")
